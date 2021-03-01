@@ -2,6 +2,7 @@
 package components.comp3_objects.project;
 
 /**
+ * 
  * A skeleton class that models the functionality of a Fog machine
  * @author Technology Rediscovery
  */
@@ -14,7 +15,7 @@ public class FogMachine {
     // NO MAIN method in the "blueprint" class
     
     public double getFluidLevelPercent(){
-        
+        int fluidPercent;
         // write the guts of this method which calculates
         // the percent of the fluid remaining in the machine
         // by dividing the current level by the max level
