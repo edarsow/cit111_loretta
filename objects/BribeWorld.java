@@ -42,8 +42,27 @@ public class BribeWorld {
         
         // call method, passing in a reference to (i.e. a remote control)
         // an instance of the Envelope class called physics bribe
+        System.out.println("Inside main, before print");
         displayEnvelopeValues(physicsBribe);
-        displayEnvelopeValues(linearAlgebraBribe);
+        
+        /*
+        
+        TODO For Wednesday 21-APR'19: Call method removeCashFromEnvelope
+        on both the phsics and linearAlgebra bribe
+        and prove that our method words by passing 
+        a reference to these objects down to our 
+        printing method
+        
+        */
+        
+        
+        
+        
+        // prefix the words "Please give me a" to physics envelope text
+        prefixEnvelopeText(physicsBribe, "Please give me a");
+        System.out.println("Inside main, before print");
+        
+        displayEnvelopeValues(physicsBribe);
         
         
     } // close main
@@ -63,6 +82,22 @@ public class BribeWorld {
         System.out.println("Text on Front: " + env.textOnFront);
        
    } // close utility method!
+   
+   /**
+    * Demo of the concept that we are passing around
+    * references to (i.e. remote controls to) objects
+    * and we aren't making copies when we pass 
+    * Known as "Pass by Reference" calling
+    * @param env
+    * @param prefix 
+    */
+   public static void prefixEnvelopeText(Envelope env, String prefix){
+       System.out.println("Prefixing \"" + prefix + "\" to Envelope ID " + env.idNumer);
+       // squish the prefix text in front of any given Envelope object's 
+       // text!
+       env.textOnFront = prefix + " " + env.textOnFront;
+       
+   }
     
     
 } // close class

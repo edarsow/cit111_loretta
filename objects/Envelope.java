@@ -20,8 +20,16 @@ public class Envelope {
     public String textOnFront;
     
     // Envelopes storing money can have that cash removed
+    /**
+     * Deducts inputted value from member variable CashContents
+     * @param cashRemoved value to deduct from THIS instance
+     * of Envelope
+     */
     public void removeCashFromEnvelope(double cashRemoved){
-        // Write my guts
+        cashContents = cashContents - cashRemoved;
+        if(cashContents < 0){
+            cashContents = 0;
+        } 
     }
     
     
