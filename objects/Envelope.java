@@ -11,6 +11,16 @@ package objects;
  * @author edith
  */
 public class Envelope {
+    
+    /**
+     * Static member variable means that each new intances
+     * of Envelope will have the VERY SAME VALUE for its
+     * variable called filmInspiration. I.e. JVM does not
+     * make a customizable container on each instance called
+     * filmInspiration
+     */
+    public static String filmInspiration = "A Serious Man";
+    
     // Member variables:
     // Each instance of our Envelop Class will
     // have storage containers with these names
@@ -26,7 +36,10 @@ public class Envelope {
      * of Envelope
      */
     public void removeCashFromEnvelope(double cashRemoved){
-        cashContents = cashContents - cashRemoved;
+        System.out.println("Removing " + cashRemoved + " from env id: " + this.idNumer) ;
+        // subtract inputted cashRemoved from this instances's 
+        // variable cashContents and overwrite the previous value
+        this.cashContents = this.cashContents - cashRemoved;
         if(cashContents < 0){
             cashContents = 0;
         } 
